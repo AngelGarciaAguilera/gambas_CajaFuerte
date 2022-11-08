@@ -1,0 +1,61 @@
+' Gambas class file
+
+'ESTADO - ATRIBUTOS
+
+Private cAbierta As Boolean 'cAbierta = True la Caja está abierta
+Private clave As String
+
+'#################################################
+
+'COMPORTAMIENTO - MÉTODOS
+
+'Constructor
+
+Public Sub _new() 'si ponemos parámetros entre los paréntesis significa que desde fuera estamos pidiendo datos
+  
+  cAbierta = False
+  clave = "0000"
+  
+End
+
+'Clave nueva
+Public Function cambiarClave(antiguaClave As String, nuevaClave As String) As Boolean
+  
+  cAbierta = False 'cierro la caja fuerte para cambiar la contraseña
+  
+  If (antiguaClave = clave) Then
+    If (nuevaClave.len <> 4) Then 
+      Return False
+    Else 
+      clave = nuevaClave
+      Return True
+    Endif
+  Endif
+  
+  Return False 'es como si hubiese un Else
+  
+End
+
+'Abrir
+Public Function abrirCaja(pass As String) As Boolean
+  
+  If (pass = clave) Then
+    cAbierta = True
+    Return True
+  Endif
+  
+  Return False 'es como si hubiese un Else
+  
+End
+
+'Cerrar
+Public Sub cerrarCaja() As Boolean
+  
+  If (cAbierta = True) Then
+    cAbierta = False
+    Return True
+  Endif
+  
+  Return False
+  
+End

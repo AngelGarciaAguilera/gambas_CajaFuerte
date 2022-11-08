@@ -1,0 +1,48 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,85.7143,40)
+  Background = Color.TooltipForeground
+  { TPass TextBox
+    MoveScaled(17,13,24,4)
+    Foreground = Color.SelectedBackground
+    Alignment = Align.Center
+  }
+  { BAbrir Button
+    MoveScaled(6,32,14.2857,5)
+    Text = ("Abrir Caja")
+  }
+  { BCambiar Button
+    MoveScaled(34,32,17.8571,5)
+    Text = ("Cambiar Password")
+  }
+  { BCerrar Button
+    MoveScaled(66,32,14.2857,5)
+    Text = ("Cerrar Caja")
+  }
+  { TNewpass TextBox
+    MoveScaled(50,13,24,4)
+    Enabled = False
+    Foreground = Color.SelectedBackground
+    Alignment = Align.Center
+  }
+  { LResultado Label
+    MoveScaled(23,20,45,8)
+    Background = &H000000&
+    Foreground = Color.Background
+    Alignment = Align.Center
+    Border = Border.Etched
+  }
+  { LPass Label
+    MoveScaled(22,6,13,4)
+    Background = &HFFFFFF&
+    Alignment = Align.Center
+    Text = ("Contraseña:")
+  }
+  { LPass2 Label
+    MoveScaled(53,6,19,4)
+    Background = &HFFFFFF&
+    Alignment = Align.Center
+    Text = ("Nueva Contraseña:")
+  }
+}
